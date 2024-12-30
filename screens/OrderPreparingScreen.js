@@ -1,16 +1,17 @@
 import { StyleSheet, Text, View,Image } from 'react-native'
 import React,{useEffect} from 'react'
+import LottieView from 'lottie-react-native';
 
 
 const OrderPreparingScreen = ({navigation}) => {
     useEffect(()=>{
         setTimeout(()=>{
             navigation.navigate("Delivery")
-        },2000)
+        },3000)
     },[])
   return (
     <View style={{flex:1,alignItems:"center",justifyContent:"center",backgroundColor:"white"}}>
-     <Image source={require("../images/delivery.gif")} style={{height:"50%",width:500}}/>
+     <LottieView source={require('../images/animation.json')} autoPlay loop style={{height:500,width:400}} />
     </View>
   )
 }
